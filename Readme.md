@@ -3,7 +3,7 @@
 ## Easy
 
 1. Create Database
-2. Crete Springboot Backend (Rest API)
+2. Create Springboot Backend (Rest API)
 3. Create ReactJS Front-end stuff
 
 ## Tuff
