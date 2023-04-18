@@ -30,7 +30,7 @@ public class SurveyController {
     }
 
     //http://localhost:8080/deleteSurvey/1
-    @GetMapping("/deleteSurvey")
+    @GetMapping("/deleteSurvey/{surveyId}")
     public String deleteSurveyByID(@PathVariable("surveyId") Integer surveyId){
         String checkIfDeleted = surveyService.deleteSurveyById(surveyId);
         return checkIfDeleted;
