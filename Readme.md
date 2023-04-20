@@ -1,3 +1,14 @@
+# Tasks done
+
+> 1. Implemented Survey Part
+> 2. Implemented Question Part
+
+# Tasks Remaining
+
+> 1. Implementing Response Part
+> 2. Establishing Relationship
+> 3. Front-end??
+
 # Tasks
 
 <div align ="center">
