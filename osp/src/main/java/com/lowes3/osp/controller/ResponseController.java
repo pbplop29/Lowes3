@@ -29,7 +29,7 @@ public class ResponseController {
         return responseService.getResponseById(userId);
     }
 
-    //http://localhost:8080/updateQuestion
+    //http://localhost:8080/updateResponse
     @PutMapping("/updateResponse ")
     public Response  updateResponse (@RequestBody Response response ){
         return responseService.updateResponse(response);
