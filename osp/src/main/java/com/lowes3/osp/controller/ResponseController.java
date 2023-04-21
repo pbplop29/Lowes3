@@ -8,12 +8,6 @@ import com.lowes3.osp.service.ResponseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-package com.lowes3.osp.controller;
-
-import com.lowes3.osp.entity.Question;
-import com.lowes3.osp.service.QuestionService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
 
 
 @RestController
