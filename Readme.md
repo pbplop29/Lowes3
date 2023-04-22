@@ -112,5 +112,5 @@ We should understand that, these packages have only significance and that is pro
   > > > 1.  SurveyRepository
   > > > 2.  QuestionsRepository
   > > > 3.  ResponsesRepository
-- For all entities we need to perform operations on the entities, thus services and their implementations
-- For all entities, we may have independently accessible URLs for all the operations, thus controllers and their implementations.
+- For all entities we need to perform operations on the entities, thus services and their implementation.
+- For all entities, we may have independently accessible URLs for all the operations, thus controllers and their implementation.
