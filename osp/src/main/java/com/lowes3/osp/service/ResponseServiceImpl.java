@@ -27,7 +27,7 @@ public class ResponseServiceImpl implements ResponseService{
 
     @Override
     public Response updateResponse(Response response) {
-        if(responseRepository.existsById(response.getResponsId())) return responseRepository.save(response);
+        if(responseRepository.existsById(response.getUserId())) return responseRepository.save(response);
         else return null;
     }
 

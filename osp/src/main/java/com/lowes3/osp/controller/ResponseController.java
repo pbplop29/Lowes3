@@ -24,13 +24,13 @@ public class ResponseController {
     }
 
     //http://localhost:8080/getResponse /1
-    @GetMapping("/getResponse /{userId}")
+    @GetMapping("/getResponse/{userId}")
     public Response getResponseById(@PathVariable("userId") Integer userId) {
         return responseService.getResponseById(userId);
     }
 
     //http://localhost:8080/updateResponse
-    @PutMapping("/updateResponse ")
+    @PutMapping("/updateResponse")
     public Response  updateResponse (@RequestBody Response response ){
         return responseService.updateResponse(response);
     }
