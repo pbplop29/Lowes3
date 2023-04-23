@@ -3,6 +3,8 @@ package com.lowes3.osp.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,12 +23,12 @@ public class Question {
     @Column(name = "question_Description")
     private String questionDescription;
     
-    //Many To One relationship with survey
+    //Many-To-One relationship with survey
     @ManyToOne
     @JoinColumn(name = "survey_Id")
     private Survey survey;
     
-    //One to Many relationship with Response
+    //One-to-Many relationship with Response
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List <Response> response;
+    private List<Response> responses;
 }

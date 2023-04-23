@@ -3,6 +3,8 @@ package com.lowes3.osp.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.List;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,6 +23,6 @@ public class User {
 
     
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List <Response> response;
+    private List<Response> responses;
 
 }

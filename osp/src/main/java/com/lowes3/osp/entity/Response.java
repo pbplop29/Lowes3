@@ -19,12 +19,12 @@ public class Response {
     @Column(name = "response_Details")    
     private String responseDetails;
 
-    //Many To One relationship with survey
+    //Many-To-One relationship with survey
     @ManyToOne
     @JoinColumn(name = "question_Id")
     private Question question;
     
-  //Many To One relationship with survey
+  //Many-To-One relationship with survey
     @ManyToOne
     @JoinColumn(name = "user_Id")
     private User user;
