@@ -14,7 +14,14 @@ import lombok.*;
 public class Survey {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "survey_Id")
     private Integer surveyId;
+    @Column(name = "survey_Title")
     private String surveyTitle;
+    @Column(name = "survey_Description")
     private String surveyDescription;
+    
+    
+    @OneToMany(mappedBy = "survey", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List <Question> question;
 }
