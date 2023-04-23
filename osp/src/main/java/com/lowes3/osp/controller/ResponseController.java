@@ -24,9 +24,9 @@ public class ResponseController {
     }
 
     //http://localhost:8080/getResponse /1
-    @GetMapping("/getResponse/{userId}")
-    public Response getResponseById(@PathVariable("userId") Integer userId) {
-        return responseService.getResponseById(userId);
+    @GetMapping("/getResponse/{responseId}")
+    public Response getResponseById(@PathVariable("responseId") Integer responseId) {
+        return responseService.getResponseById(responseId);
     }
 
     //http://localhost:8080/updateResponse
@@ -36,9 +36,9 @@ public class ResponseController {
     }
 
     //http://localhost:8080/deleteResponse/1
-    @DeleteMapping("/deleteResponse/{userId}")
-    public String deleteResponseByID(@PathVariable("userId") Integer userId){
-        String checkIfDeleted = responseService.deleteResponseById(userId);
+    @DeleteMapping("/deleteResponse/{responseId}")
+    public String deleteResponseByID(@PathVariable("responseId") Integer responseId){
+        String checkIfDeleted = responseService.deleteResponseById(responseId);
         return checkIfDeleted;
     }
 }
