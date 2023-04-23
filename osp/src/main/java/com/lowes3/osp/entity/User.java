@@ -10,11 +10,11 @@ import lombok.*;
 @ToString
 
 @Entity
-@Table(name = "response_table")
-public class Response {
+@Table(name = "user_table")
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer responseId;
-    private String responseDetails;
+    private Integer userId;
+    private String userName;
 
 }

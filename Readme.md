@@ -9,6 +9,20 @@
 > 1. Establishing Relationship
 > 2. Front-end??
 
+# Establishing Relationship
+
+Please Go through the following link to understand the OneToMany, ManyToOne and other types of mappings.
+
+> https://dev.to/jhonifaber/hibernate-onetoone-onetomany-manytoone-and-manytomany-8ba
+
+<div align ="center">
+<img title="Task" alt="Task Description Image" src="https://i.ibb.co/Lns5bXJ/Whats-App-Image-2023-04-23-at-15-08-52.jpg">
+</div>
+
+<div align ="center">
+<img title="Task" alt="Task Description Image" src="https://i.ibb.co/F0YzbxT/Whats-App-Image-2023-04-23-at-15-48-15.jpg">
+</div>
+
 # Tasks
 
 <div align ="center">
