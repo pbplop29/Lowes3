@@ -2,12 +2,12 @@
 
 > 1. Implemented Survey Part
 > 2. Implemented Question Part
+> 3. Implementing Response Part
 
 # Tasks Remaining
 
-> 1. Implementing Response Part
-> 2. Establishing Relationship
-> 3. Front-end??
+> 1. Establishing Relationship
+> 2. Front-end??
 
 # Tasks
 
