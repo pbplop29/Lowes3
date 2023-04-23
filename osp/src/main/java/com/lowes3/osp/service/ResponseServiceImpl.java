@@ -27,15 +27,15 @@ public class ResponseServiceImpl implements ResponseService{
 
     @Override
     public Response updateResponse(Response response) {
-        if(responseRepository.existsById(response.getUserId())) return responseRepository.save(response);
+        if(responseRepository.existsById(response.getResponseId())) return responseRepository.save(response);
         else return null;
     }
 
     @Override
-    public String deleteResponseById(Integer userId) {
-        Optional<Response> response = responseRepository.findById(userId);
+    public String deleteResponseById(Integer responseId) {
+        Optional<Response> response = responseRepository.findById(responseId);
         if (response.isPresent()){
-        	responseRepository.deleteById(userId);
+        	responseRepository.deleteById(responseId);
             return "Deleted the response.";
         }
         else return "Could not find response by Id.";
