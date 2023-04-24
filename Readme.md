@@ -13,6 +13,8 @@
 
 Please Go through the following link to understand the OneToMany, ManyToOne and other types of mappings.
 
+> swagger stuff please look into, easier than postman
+
 > https://dev.to/jhonifaber/hibernate-onetoone-onetomany-manytoone-and-manytomany-8ba
 
 <div align ="center">
