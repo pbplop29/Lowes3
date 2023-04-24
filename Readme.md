@@ -128,3 +128,46 @@ We should understand that, these packages have only significance and that is pro
   > > > 3.  ResponsesRepository
 - For all entities we need to perform operations on the entities, thus services and their implementation.
 - For all entities, we may have independently accessible URLs for all the operations, thus controllers and their implementation.
+
+# Testing the backend
+
+1. Have users already present and created
+2. Create Survey first
+3. Add questions to survey
+4. Add resonses to the questions
+5. Do required CRUD operations
+
+```json
+{
+  "userName": "qwertyuiokjhgfdszxcvbnm"
+}
+```
+
+```json
+{
+  "surveyTitle": "ABCDEFGHIJ",
+  "surveyDescription": "loremipsumqwertyuioplkjhgfdsazxcvbnm"
+}
+```
+
+```json
+{
+  "questionType": "qwertyuioplkjhgfdsa",
+  "questionDescription": "qwertyuioplkjhgfdsazxcvbnm",
+  "survey": {
+    "surveyId": 1
+  }
+}
+```
+
+```json
+{
+  "responseDetails": "sdfgjkjhgfdsxcgh",
+  "question": {
+    "questionId": 4
+  },
+  "user": {
+    "userId": 4
+  }
+}
+```
