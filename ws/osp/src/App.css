@@ -1,15 +1,22 @@
 
 :root {
-  --pblue: #05396B;
-  --pgreen: #389583;
-  --sgreen: #5CDB94;
-  --lgreen: #8DE4AF;
-  --swhite:#EDF5E0;
+--primary:#6EADA4;
+--secondary:#9E6637;
+--primary_dark:#48726B;
+--primary_light:#7CA7A0;
+--white : #DADADA;
 }
 
-body{
-  background-color: var(--sgreen);
+@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&family=Tourney:wght@100;400&display=swap');
+
+
+
+body {
+  background-image: url('./assets/background.jpg'); 
+  background-size: cover; 
+  background-attachment: fixed; 
 }
+
 
 body::-webkit-scrollbar {
   display: none;

@@ -1,0 +1,14 @@
+/* font-family: 'MuseoModerno', cursive;
+font-family: 'Tourney', cursive; */
+
+*{
+text-align: justify;
+color:var(--white);
+font-family: 'MuseoModerno', cursive;
+}
+
+.home-welcome{
+    font-family: 'Tourney', cursive;
+    font-size: 70px;
+    letter-spacing: -2px;
+}

@@ -6,9 +6,18 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    background-color: var(--sgreen);
     justify-content: space-between;
-  
+    background-color: transparent;
+    backdrop-filter: blur(5px) opacity(1);
+    box-shadow: 0 0 20px rgba(114, 175, 168, 0.8);
+    
+  }
+
+  .header::before{
+    content: "";
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1;
   }
 
   .header-left {
@@ -22,12 +31,12 @@
   }
 
   .header-left >a {
-    font-family: "Antonio", sans-serif;
+    font-family: 'MuseoModerno', cursive;
     text-decoration: none;
     margin-bottom: 0.1rem;
     margin-right: 20px;
     margin-left: 20px;
-    color: var(--pblue);
+    color: var(--primary_light);
     text-transform: uppercase;
     letter-spacing: 0.2rem;
  
@@ -36,21 +45,22 @@
   .header-left >a > span {
     font-size: 3rem;
     margin-right: -0.1rem;
-    font-family: "Krona One", sans-serif;
+    font-family: 'Tourney', cursive;
     transition: 1s;
+    color: var(--primary_light);
   }
 
   .header-left > a:hover span {
-    color: var(--pgreen);
+    color: var(--white);
     transition: 1s;
     font-size: 3rem;
     margin-right: -0.1rem;
-    font-family: "Krona One", sans-serif;
+    font-family: 'Tourney', cursive;
     transition: 1s;
   }
 
   .header-right>img{
-    padding-right: 10px;
+    margin-right: 15px;
     height: 50px;
     width: 100px;
   }
