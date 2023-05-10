@@ -45,7 +45,7 @@ const CreateSurvey = () => {
   };
 
   const questionInputs = questions.map((question, index) => (
-    <div key={index}>
+    <div key={index} className="survey-questions">
       <label htmlFor={`question-${index}`}>{`Question ${index + 1}`}</label>
       <input
         id={`question-${index}`}
@@ -79,17 +79,16 @@ const CreateSurvey = () => {
         style={{ color: "black" }}
       />
 
-      <div>
-        <label htmlFor="description">Description:</label>
-        <input
-          id="description"
-          value={description}
-          onChange={handleDescriptionChange}
-          required
-          style={{ color: "black" }}
-        />
-      </div>
-      {questionInputs}
+      <label htmlFor="description">Description:</label>
+      <input
+        id="description"
+        value={description}
+        onChange={handleDescriptionChange}
+        required
+        style={{ color: "black" }}
+      />
+      <div className="survey-questions-list">{questionInputs}</div>
+
       <button
         type="button"
         onClick={handleAddQuestion}

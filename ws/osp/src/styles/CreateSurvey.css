@@ -1,11 +1,27 @@
 form{
     background-image:url(../assets/background.jpg);
     position: relative;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
     margin: 30px;
     left: 50%;
     max-width: 70%;
     transform: translate(-50%);
+
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px rgba(110, 173, 164, 0.5);
+}
+
+
+.survey-questions-list{
     align-items: center;
     justify-content: center;
+}
+
+.survey-questions>input{
+    align-items: center;
+    margin: 1px;
+    border-radius: 3px;
 }
