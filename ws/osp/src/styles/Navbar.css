@@ -28,6 +28,11 @@
   .header-right {
     display: flex;
     align-items: center;
+    margin-right: 20px;
+    color: var(--primary_light);
+    font-size: 50px;
+    font-family: 'MuseoModerno', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 
   .header-left >a {
@@ -39,29 +44,9 @@
     color: var(--primary_light);
     text-transform: uppercase;
     letter-spacing: 0.2rem;
+    font-size: 25px;
  
   }
 
-  .header-left >a > span {
-    font-size: 3rem;
-    margin-right: -0.1rem;
-    font-family: 'Tourney', cursive;
-    transition: 1s;
-    color: var(--primary_light);
-  }
+  
 
-  .header-left > a:hover span {
-    color: var(--white);
-    transition: 1s;
-    font-size: 3rem;
-    margin-right: -0.1rem;
-    font-family: 'Tourney', cursive;
-    transition: 1s;
-  }
-
-  .header-right>img{
-    margin-right: 15px;
-    height: 50px;
-    width: 100px;
-  }
- 
