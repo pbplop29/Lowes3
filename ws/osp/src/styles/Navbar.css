@@ -1,0 +1,35 @@
+/* .header {
+    z-index: 1;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    height: 2rem;
+    color: white;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+  }
+  .header >a {
+    font-family: "Antonio", sans-serif;
+    text-decoration: none;
+    margin-bottom: 0.1rem;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+  }
+
+  .header >a > span {
+    font-size: 3rem;
+    margin-right: -0.1rem;
+    font-family: "Krona One", sans-serif;
+    transition: 1s;
+  }
+
+  .header > a:hover span {
+    color: red;
+    transition: 1s;
+    font-size: 3rem;
+    margin-right: -0.1rem;
+    font-family: "Krona One", sans-serif;
+    transition: 1s;
+  } */
