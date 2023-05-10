@@ -4,7 +4,7 @@ font-family: 'Tourney', cursive; */
 *{
     /* border: 2px solid red; */
 text-align: justify;
-color:brown;
+color:var(--white);
 font-family: 'MuseoModerno', cursive;
 }
 

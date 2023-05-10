@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import "../styles/Pages.css";
+import "../styles/CreateSurvey.css";
 
 const CreateSurvey = () => {
   const [title, setTitle] = useState("");
@@ -53,9 +53,14 @@ const CreateSurvey = () => {
         value={question}
         onChange={(event) => handleQuestionChange(event, index)}
         required
+        style={{ color: "black" }}
       />
       {index > 0 && (
-        <button type="button" onClick={() => handleRemoveQuestion(index)}>
+        <button
+          type="button"
+          onClick={() => handleRemoveQuestion(index)}
+          style={{ color: "black" }}
+        >
           Remove
         </button>
       )}
@@ -64,16 +69,16 @@ const CreateSurvey = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
-        <label htmlFor="title">Title:</label>
-        <input
-          id="title"
-          type="text"
-          value={title}
-          onChange={handleTitleChange}
-          required
-        />
-      </div>
+      <label htmlFor="title">Title:</label>
+      <input
+        id="title"
+        type="text"
+        value={title}
+        onChange={handleTitleChange}
+        required
+        style={{ color: "black" }}
+      />
+
       <div>
         <label htmlFor="description">Description:</label>
         <input
@@ -81,13 +86,20 @@ const CreateSurvey = () => {
           value={description}
           onChange={handleDescriptionChange}
           required
+          style={{ color: "black" }}
         />
       </div>
       {questionInputs}
-      <button type="button" onClick={handleAddQuestion}>
+      <button
+        type="button"
+        onClick={handleAddQuestion}
+        style={{ color: "black" }}
+      >
         Add Question
       </button>
-      <button type="submit">Submit</button>
+      <button type="submit" style={{ color: "black" }}>
+        Submit
+      </button>
     </form>
   );
 };

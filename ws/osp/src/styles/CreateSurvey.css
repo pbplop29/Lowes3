@@ -1,0 +1,11 @@
+form{
+    background-image:url(../assets/background.jpg);
+    position: relative;
+    padding: 20px;
+    margin: 30px;
+    left: 50%;
+    max-width: 70%;
+    transform: translate(-50%);
+    align-items: center;
+    justify-content: center;
+}
