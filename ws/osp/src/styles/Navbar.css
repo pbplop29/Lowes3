@@ -1,4 +1,4 @@
-/* .header {
+.header {
     z-index: 1;
     margin-left: 1rem;
     margin-top: 1rem;
@@ -32,4 +32,4 @@
     margin-right: -0.1rem;
     font-family: "Krona One", sans-serif;
     transition: 1s;
-  } */
+  }
