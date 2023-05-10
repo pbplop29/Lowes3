@@ -12,13 +12,17 @@ const routes = [
 function App() {
   return (
     <div className="App">
-      <Navbar />
-
-      <Routes>
-        {routes.map(({ path, Component }) => (
-          <Route key="name" path={path} element={<Component />}></Route>
-        ))}
-      </Routes>
+      <div className="app-body">
+        <Navbar />
+        <br />
+        <div className="pages-container">
+          <Routes>
+            {routes.map(({ path, Component }) => (
+              <Route key="name" path={path} element={<Component />}></Route>
+            ))}
+          </Routes>
+        </div>
+      </div>
     </div>
   );
 }

@@ -1,35 +1,57 @@
 .header {
     z-index: 1;
-    margin-left: 1rem;
-    margin-top: 1rem;
     font-size: 1.2rem;
-    height: 2rem;
-    color: white;
+    height:60px;
     position: fixed;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 100%;
+    background-color: var(--sgreen);
+    justify-content: space-between;
+  
   }
-  .header >a {
+
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-left >a {
     font-family: "Antonio", sans-serif;
     text-decoration: none;
     margin-bottom: 0.1rem;
-    color: black;
+    margin-right: 20px;
+    margin-left: 20px;
+    color: var(--pblue);
     text-transform: uppercase;
     letter-spacing: 0.2rem;
+ 
   }
 
-  .header >a > span {
+  .header-left >a > span {
     font-size: 3rem;
     margin-right: -0.1rem;
     font-family: "Krona One", sans-serif;
     transition: 1s;
   }
 
-  .header > a:hover span {
-    color: red;
+  .header-left > a:hover span {
+    color: var(--pgreen);
     transition: 1s;
     font-size: 3rem;
     margin-right: -0.1rem;
     font-family: "Krona One", sans-serif;
     transition: 1s;
   }
+
+  .header-right>img{
+    padding-right: 10px;
+    height: 50px;
+    width: 100px;
+  }
+ 
