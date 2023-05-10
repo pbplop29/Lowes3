@@ -17,3 +17,25 @@ font-family: 'MuseoModerno', cursive;
     margin-left: 200px;
     font-size: 20px;
 }
+
+.home-button{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-button>button{
+    color:var(--white);
+    background-color: var(--secondary);
+    padding:10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0px 0px 5px rgba(110, 173, 164, 0.5);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.home-button>button:hover {
+    box-shadow: 0px 0px 10px 5px rgba(110, 173, 164, 0.8);
+  }
