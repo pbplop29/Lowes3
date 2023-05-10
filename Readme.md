@@ -1,13 +1,17 @@
 # Tasks done
 
-> 1. Implemented Survey Part
-> 2. Implemented Question Part
-> 3. Implementing Response Part
+> 1. Rest API using JAVA and Springboot
+> 2. Frontend using REACT
 
-# Tasks Remaining
+```
+Routing ✅
+Pages Creation ✅
+Home Page ✅
 
-> 1. Establishing Relationship
-> 2. Front-end??
+Survey Page ❌
+SignUp/SignIn Page ❌
+User Authentication ❌
+```
 
 # Establishing Relationship
 

@@ -1,12 +1,14 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
+import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import { Routes, Route } from "react-router-dom";
+import CreateSurvey from "./pages/CreateSurvey";
 
 const routes = [
   { path: "/", name: "Home", Component: Home },
   { path: "/about", name: "About", Component: About },
+  { path: "/createSurvey", name: "CreateSurvey", Component: CreateSurvey },
 ];
 
 function App() {

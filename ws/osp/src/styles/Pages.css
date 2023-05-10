@@ -2,9 +2,15 @@
 font-family: 'Tourney', cursive; */
 
 *{
+    /* border: 2px solid red; */
 text-align: justify;
 color:var(--white);
 font-family: 'MuseoModerno', cursive;
+}
+
+.home{
+    position: relative;
+    justify-content: center;
 }
 
 .home-welcome{
@@ -16,6 +22,21 @@ font-family: 'MuseoModerno', cursive;
 .home-welcome-follow{
     margin-left: 200px;
     font-size: 20px;
+}
+
+.home-welcome-description{
+    margin-top: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    width: 400px;
+    font-size: 17px;
+}
+
+.home-welcome-description>span{
+   font-size: 30px;
 }
 
 .home-button{
@@ -33,7 +54,12 @@ font-family: 'MuseoModerno', cursive;
     border: none;
     font-size: 20px;
     box-shadow: 0px 0px 5px rgba(110, 173, 164, 0.5);
-  transition: box-shadow 0.2s ease-in-out;
+    transition: box-shadow 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.home-button-link{
+    text-decoration: none;
 }
 
 .home-button>button:hover {

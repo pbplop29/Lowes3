@@ -13,6 +13,9 @@ const Navbar = () => {
           <NavLink exact to="/about">
             About
           </NavLink>
+          <NavLink exact to="/createSurvey">
+            Create
+          </NavLink>
         </div>
         <div className="header-right">OSP</div>
       </div>
