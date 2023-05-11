@@ -35,10 +35,16 @@ const CreateSurvey = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    const questionsWithDescription = questions.map((question) => {
+      return {
+        questionDescription: question,
+      };
+    });
+
     const survey = {
       title,
       description,
-      questions,
+      questions: questionsWithDescription,
     };
 
     console.log(JSON.stringify(survey));
@@ -103,6 +109,7 @@ const CreateSurvey = () => {
         type="submit"
         className="create-survey-form-button"
         style={{ color: "black" }}
+        onClick={handleSubmit}
       >
         Submit
       </button>
