@@ -6,7 +6,7 @@ form{
     padding: 50px;
     margin: 30px;
     left: 50%;
-    max-width: 70%;
+    max-width: 60%;
     transform: translate(-50%);
     justify-content: center;
     border-radius: 20px;
@@ -35,4 +35,10 @@ form>button{
     margin: 5px;
     border-radius: 3px;
     width: 60%;
+}
+
+.create-survey-form-button{
+    align-self: flex-end;
+    border-radius: 10px;
+    margin: 5px;
 }
