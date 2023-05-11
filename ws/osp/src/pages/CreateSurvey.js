@@ -48,6 +48,7 @@ const CreateSurvey = () => {
     <div key={index} className="survey-questions">
       <label htmlFor={`question-${index}`}>{`Question ${index + 1}`}</label>
       <input
+        placeholder="Enter Question Here"
         id={`question-${index}`}
         type="text"
         value={question}
@@ -61,7 +62,7 @@ const CreateSurvey = () => {
           onClick={() => handleRemoveQuestion(index)}
           style={{ color: "black" }}
         >
-          Remove
+          Delete
         </button>
       )}
     </div>
@@ -69,8 +70,9 @@ const CreateSurvey = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="title">Title:</label>
+      <label htmlFor="title">Survey Title</label>
       <input
+        placeholder="Enter Title Here"
         id="title"
         type="text"
         value={title}
@@ -78,17 +80,17 @@ const CreateSurvey = () => {
         required
         style={{ color: "black" }}
       />
-
-      <label htmlFor="description">Description:</label>
+      <label htmlFor="description">Survey Description</label>
       <input
+        placeholder="Enter Description Here"
         id="description"
         value={description}
         onChange={handleDescriptionChange}
         required
         style={{ color: "black" }}
       />
+      Survey Questions:
       <div className="survey-questions-list">{questionInputs}</div>
-
       <button
         type="button"
         onClick={handleAddQuestion}
