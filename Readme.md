@@ -4,13 +4,21 @@
 > 2. Frontend using REACT
 
 ```
+Created Pages and Routes:✅
 Routing ✅
 Pages Creation ✅
 Home Page ✅
+Create Survey Page ✅
 
-Survey Page ❌
+Routes Created but Content Remaining:❓
+Edit Survey Page ❓
+Respond to Survey Page ❓
+
+No Routes and No Pages:❌
 SignUp/SignIn Page ❌
 User Authentication ❌
+
+Connection to Spring REST API ❌
 ```
 
 # Establishing Relationship
