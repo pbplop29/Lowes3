@@ -16,8 +16,17 @@ const Navbar = () => {
           <NavLink exact="true" to="/createSurvey">
             Create
           </NavLink>
+          <NavLink exact="true" to="/editSurvey">
+            Edit
+          </NavLink>
         </div>
-        <div className="header-right">OSP</div>
+
+        <div className="header-right">
+          <NavLink exact="true" to="/respondToSurvey">
+            Respond
+          </NavLink>
+          OSP
+        </div>
       </div>
     </div>
   );

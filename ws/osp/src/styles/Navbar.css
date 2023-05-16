@@ -48,5 +48,18 @@
  
   }
 
+  .header-right >a {
+    font-family: 'MuseoModerno', cursive;
+    text-decoration: none;
+    margin-bottom: 0.1rem;
+    margin-right: 20px;
+    margin-left: 20px;
+    color: var(--primary_light);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 25px;
+ 
+  }
+
   
 
