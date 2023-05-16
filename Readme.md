@@ -6,11 +6,11 @@
 ```
 Created Pages and Routes:✅
 Routing ✅
-Pages Creation ✅
 Home Page ✅
 Create Survey Page ✅
 
 Routes Created but Content Remaining:❓
+About Page ❓
 Edit Survey Page ❓
 Respond to Survey Page ❓
 
