@@ -88,6 +88,7 @@ const CreateSurvey = () => {
       />
       <label htmlFor="description">Survey Description</label>
       <input
+        type="text"
         placeholder="Enter Description Here"
         id="description"
         value={description}
@@ -98,21 +99,19 @@ const CreateSurvey = () => {
       Survey Questions:
       <div className="survey-questions-list">{questionInputs}</div>
       <button
-        className="create-survey-form-button"
         type="button"
+        className="create-survey-form-button"
         onClick={handleAddQuestion}
-        style={{ color: "black" }}
+        style={{ color: "black", width: "20%" }}
       >
         Add Question
       </button>
-      <button
-        type="submit"
+      <input
         className="create-survey-form-button"
-        style={{ color: "black" }}
-        onClick={handleSubmit}
-      >
-        Submit
-      </button>
+        type="submit"
+        value="Submit"
+        style={{ color: "black", width: "20%" }}
+      />
     </form>
   );
 };

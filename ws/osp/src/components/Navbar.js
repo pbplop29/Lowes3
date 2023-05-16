@@ -7,13 +7,13 @@ const Navbar = () => {
     <div>
       <div className="header">
         <div className="header-left">
-          <NavLink exact to="/">
+          <NavLink exact="true" to="/">
             Home
           </NavLink>
-          <NavLink exact to="/about">
+          <NavLink exact="true" to="/about">
             About
           </NavLink>
-          <NavLink exact to="/createSurvey">
+          <NavLink exact="true" to="/createSurvey">
             Create
           </NavLink>
         </div>
