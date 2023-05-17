@@ -1,3 +1,47 @@
+# Errors (For Prabhat Sir)
+
+From being filled:
+
+<div align ="center">
+<img src="https://i.ibb.co/LZWRFQB/chrome-quis-BBIHV4.png">
+</div>
+
+Json Data being sent:
+
+```json
+{
+  "surveyTitle": "Survey 1",
+  "surveyDescription": "Survey 1 Description",
+  "questions": [
+    {
+      "questionType": "Descriptive",
+      "questionDescription": "Question 1 Survey 1"
+    },
+    {
+      "questionType": "Descriptive",
+      "questionDescription": "Question 2 Survey 1"
+    }
+  ]
+}
+```
+
+Survey table being updated:
+
+<div align ="center">
+<img src="https://i.ibb.co/cQMVHnx/chrome-Vk-FDITD7qr.png">
+</div>
+Question table being updated:
+<div align ="center">
+<img src="https://i.ibb.co/kQVfFjZ/chrome-q-U8bqayf-Bt.png">
+</div>
+Errors:
+<div align ="center">
+<img src="https://i.ibb.co/KjMpNzL/chrome-d-Io-At-Pi6fc.png">
+</div>
+<div align ="center">
+<img src="https://i.ibb.co/98CJRHx/chrome-wc4si-GUna-Q.png">
+</div>
+
 # Tasks done
 
 > 1. Rest API using JAVA and Springboot

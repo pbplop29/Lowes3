@@ -1,10 +1,9 @@
-
 :root {
---primary:#6EADA4;
---secondary:#9E6637;
---primary_dark:#48726B;
---primary_light:#7CA7A0;
---white : #DADADA;
+  --primary: #6EADA4;
+  --secondary: #9E6637;
+  --primary_dark: #48726B;
+  --primary_light: #7CA7A0;
+  --white: #DADADA;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@500&family=Tourney:wght@100;400&display=swap');
@@ -12,11 +11,11 @@
 
 
 body {
-  background-image: url('./assets/background.jpg'); 
-  background-size: cover; 
-  background-color: rgba(0,0,0,0.5);
+  background-image: url('./assets/background.jpg');
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
- 
+
 }
 
 
@@ -25,16 +24,17 @@ body::-webkit-scrollbar {
 }
 
 
-.app-body{
+.app-body {
   display: flex;
   flex-direction: row;
 }
-.pages-container{
+
+.pages-container {
   width: 100%;
   height: 100%;
   margin-top: 60px;
-  padding-left:20px;
-  padding-top:10px;
-  padding-right:20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
 
 }
