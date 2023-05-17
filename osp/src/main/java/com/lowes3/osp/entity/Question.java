@@ -15,7 +15,7 @@ import java.util.List;
 @Table(name = "question_table")
 public class Question {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "question_Id")
     private Integer questionId;
     @Column(name = "question_Type")
@@ -24,11 +24,18 @@ public class Question {
     private String questionDescription;
     
     //Many-To-One relationship with survey
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "survey_Id")
     private Survey survey;
     
     //One-to-Many relationship with Response
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Response> responses;
+
+    public void setResponses(List<Response> responses) {
+        this.responses = responses;
+        for (Response response : responses) {
+            response.setQuestion(this);
+        }
+    }
 }

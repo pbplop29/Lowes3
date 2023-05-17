@@ -15,7 +15,7 @@ import java.util.List;
 @Table(name = "survey_table")
 public class Survey {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "survey_Id")
     private Integer surveyId;
     @Column(name = "survey_Title")
@@ -26,4 +26,11 @@ public class Survey {
     
     @OneToMany(mappedBy = "survey", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Question> questions;
+
+    public void setQuestions(List<Question> questions) {
+        this.questions = questions;
+        for (Question question : questions) {
+            question.setSurvey(this);
+        }
+    }
 }

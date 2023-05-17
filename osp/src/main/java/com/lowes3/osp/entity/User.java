@@ -25,4 +25,10 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Response> responses;
 
+    public void setResponses(List<Response> responses) {
+        this.responses = responses;
+        for (Response response : responses) {
+            response.setUser(this);
+        }
+    }
 }

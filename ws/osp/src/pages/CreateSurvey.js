@@ -37,13 +37,14 @@ const CreateSurvey = () => {
 
     const questionsWithDescription = questions.map((question) => {
       return {
+        questionType: "Descriptive",
         questionDescription: question,
       };
     });
 
     const survey = {
-      title,
-      description,
+      surveyTitle: title,
+      surveyDescription: description,
       questions: questionsWithDescription,
     };
 
