@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "../styles/CreateSurvey.css";
+import axios from "axios";
 
 const CreateSurvey = () => {
   const [title, setTitle] = useState("");
@@ -32,6 +33,17 @@ const CreateSurvey = () => {
     setQuestions(newQuestions);
   };
 
+  const saveSurvey = (survey) => {
+    axios
+      .post("http://localhost:8080/saveSurvey", survey)
+      .then((response) => {
+        console.log("Survey saved successfully!");
+      })
+      .catch((error) => {
+        console.error("Error saving survey:", error);
+      });
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -48,7 +60,7 @@ const CreateSurvey = () => {
       questions: questionsWithDescription,
     };
 
-    console.log(JSON.stringify(survey));
+    saveSurvey(survey);
   };
 
   const questionInputs = questions.map((question, index) => (
