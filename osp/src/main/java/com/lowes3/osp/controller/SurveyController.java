@@ -2,6 +2,9 @@ package com.lowes3.osp.controller;
 
 import com.lowes3.osp.entity.Survey;
 import com.lowes3.osp.service.SurveyService;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,6 +25,12 @@ public class SurveyController {
     @GetMapping("/getSurvey/{surveyId}")
     public Survey getSurveyById(@PathVariable("surveyId") Integer surveyId) {
         return surveyService.getSurveyById(surveyId);
+    }
+    
+    //http://localhost:8080/getSurveys
+    @GetMapping("/getSurveys")
+    public List<Survey> getSurveys() {
+        return surveyService.getSurveys();
     }
 
     //http://localhost:8080/updateSurvey

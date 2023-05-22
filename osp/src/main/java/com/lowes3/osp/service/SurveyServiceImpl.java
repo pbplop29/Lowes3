@@ -5,6 +5,7 @@ import com.lowes3.osp.entity.Survey;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -38,5 +39,10 @@ public class SurveyServiceImpl implements SurveyService {
             return "Deleted the Survey.";
         }
         else return "Could not find Survey by Id.";
+    }
+    
+    @Override
+    public List<Survey> getSurveys() {
+        return (List<Survey>) surveyRepository.findAll();
     }
 }

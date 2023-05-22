@@ -1,6 +1,9 @@
 package com.lowes3.osp.service;
 
 import com.lowes3.osp.entity.Survey;
+
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 @Service
@@ -9,6 +12,8 @@ public interface SurveyService {
     public Survey getSurveyById(Integer surveyId);
     public Survey updateSurvey(Survey survey);
     public String deleteSurveyById(Integer surveyId);
+    public List<Survey> getSurveys();
+    
 
 
 }
