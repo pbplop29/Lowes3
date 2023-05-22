@@ -34,7 +34,7 @@ const EditSurvey = () => {
           setDescription(data.surveyDescription)
           setQuestions(data.questions)
           updateCurrentIndex(data ? data.questions[data.questions.length-1].questionId+1 : null)
-          console.log(data)
+
         })
         .catch(error => {
           console.error('Error:', error);
@@ -91,7 +91,7 @@ const EditSurvey = () => {
         questionType: question.questionType,
         questionDescription: question.questionDescription,
         responses: question.responses || [],
-        
+      
       };
     });
 
@@ -183,7 +183,7 @@ const EditSurvey = () => {
           <input
             className="create-survey-form-button"
             type="submit"
-            value="Submit"
+            value="Update"
             style={{ color: "black", width: "20%" }}
           />
         </>

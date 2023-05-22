@@ -58,6 +58,7 @@ const CreateSurvey = () => {
       surveyTitle: title,
       surveyDescription: description,
       questions: questionsWithDescription,
+      
     };
 
     saveSurvey(survey);

@@ -27,7 +27,7 @@ public class SurveyServiceImpl implements SurveyService {
 
     @Override
     public Survey updateSurvey(Survey survey) {
-        if(surveyRepository.existsById(survey.getSurveyId())) return surveyRepository.save(survey);
+        if(surveyRepository.existsById(survey.getSurveyId())) return (Survey) surveyRepository.save(survey);
         else return null;
     }
 
