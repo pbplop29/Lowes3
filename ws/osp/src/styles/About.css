@@ -67,6 +67,9 @@
   
 
 .task_description_container{
- 
+  margin-top: 40px;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
 }
   

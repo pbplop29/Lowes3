@@ -109,14 +109,14 @@ const About = () => {
       <div className="task_description_container">
         <div className="about_us_title">The Task</div>
         <p> Post training assesment to test the learnings of the trainees.</p>
-        <h4> Front-end:</h4>
+        <h3> Front-end:</h3>
         <ul>
           <li>HTML, CSS, and JavaScript for building user interfaces</li>
           <li>
             JavaScript frameworks such as React for building web applications
           </li>
         </ul>
-        <h4> Back-end:</h4>
+        <h3> Back-end:</h3>
         <ul>
           <li>Programming language Java</li>
           <li>Spring Boot and spring framework</li>
