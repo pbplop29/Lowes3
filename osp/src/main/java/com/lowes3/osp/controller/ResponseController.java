@@ -8,9 +8,11 @@ import com.lowes3.osp.service.ResponseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 public class ResponseController {
     @Autowired
     private ResponseService responseService;
@@ -18,9 +20,11 @@ public class ResponseController {
     //Create or save or add
     //http://localhost:8080/saveResponse
     @PostMapping("/saveResponse")
-    public Response saveResponse (@RequestBody Response response) {
-    	Response response1 = responseService.saveResponse(response);
-        return response1;
+    public String saveResponse (@RequestBody List<Response> responses ) {
+        for(Response response:responses){
+            responseService.saveResponse(response);
+        }
+        return "Successfully Responded";
     }
 
     //http://localhost:8080/getResponse /1
