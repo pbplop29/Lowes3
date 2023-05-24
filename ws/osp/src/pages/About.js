@@ -72,7 +72,7 @@ const About = () => {
   return (
     <>
       <div className="about_description_container">
-        <div className="about_us_title">About Us</div>
+        <div className="about_page_titles">About Us</div>
         <div className="description_and_logo">
           <img src={leapLogo} alt="Leap Logo" className="leap_logo" />
           <div className="description">
@@ -91,7 +91,7 @@ const About = () => {
       </div>
 
       <div className="team_members_container">
-        <div className="about_us_title">The Team</div>
+        <div className="about_page_titles">The Team</div>
         <div className="team_members">
           {teamMembers.map((member) => (
             <div className="member_card" key={member.id}>
@@ -107,23 +107,24 @@ const About = () => {
         </div>
       </div>
       <div className="task_description_container">
-        <div className="about_us_title">The Task</div>
-        <p> Post training assesment to test the learnings of the trainees.</p>
-        <h3> Front-end:</h3>
-        <ul>
-          <li>HTML, CSS, and JavaScript for building user interfaces</li>
-          <li>
-            JavaScript frameworks such as React for building web applications
-          </li>
-        </ul>
-        <h3> Back-end:</h3>
-        <ul>
-          <li>Programming language Java</li>
-          <li>Spring Boot and spring framework</li>
-          <li>H2 Database</li>
-          <li>RESTful API design</li>
-          <li>Server-side rendering</li>
-        </ul>
+        <div className="about_page_titles">The Task</div>
+        <div className="task_description_box">
+          {" "}
+          <h2> Front-end:</h2>
+          <ul>
+            <li>HTML, CSS, and JavaScript for building user interfaces</li>
+            <li>JavaScript framework, React for building web applications</li>
+          </ul>
+        </div>
+        <div className="task_description_box">
+          <h2> Back-end:</h2>
+          <ul>
+            <li>Java</li>
+            <li>Spring Boot and Spring framework</li>
+            <li>H2 Database</li>
+            <li>RESTful API design</li>
+          </ul>
+        </div>
       </div>
     </>
   );
