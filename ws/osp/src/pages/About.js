@@ -15,7 +15,7 @@ const teamMembers = [
     name: "Anushree Deshpande",
     email: "anushree.deshpande@cumminscollege.in",
     college: "CCOEW pune",
-    emoji: "",
+    emoji: "😎",
   },
 
   {
