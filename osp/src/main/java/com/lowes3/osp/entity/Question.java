@@ -6,6 +6,7 @@ import lombok.*;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Getter
 @Setter
@@ -32,6 +33,7 @@ public class Question {
     private Survey survey;
     
     //One-to-Many relationship with Response
+    @JsonManagedReference(value="question-response")
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Response> responses;
 

@@ -5,6 +5,8 @@ import lombok.*;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -21,7 +23,7 @@ public class User {
     @Column(name = "user_Name")
     private String userName;
 
-    
+    @JsonManagedReference
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Response> responses;
 
