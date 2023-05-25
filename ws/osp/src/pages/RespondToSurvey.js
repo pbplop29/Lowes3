@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 const RespondToSurvey = () => {
+  const [currentUserId, setCurrentUserId] = useState(0);
   const [surveys, setSurveys] = useState([]);
   const [selectedSurveyID, setSelectedSurveyID] = useState(null);
   const [title, setTitle] = useState("");
@@ -22,7 +23,7 @@ const RespondToSurvey = () => {
       .catch((error) => {
         console.error("Error:", error);
       });
-  }, []);
+  }, [selectedSurveyID]);
 
   useEffect(() => {
     if (selectedSurveyID) {
@@ -47,6 +48,10 @@ const RespondToSurvey = () => {
     setAnswers(updatedAnswers);
   };
 
+  const handleUserIdChange = (event) => {
+    setCurrentUserId(parseInt(event.target.value));
+  };
+
   const saveResponses = (surveyResponses) => {
     axios
       .post("http://localhost:8080/saveResponse", surveyResponses)
@@ -69,7 +74,7 @@ const RespondToSurvey = () => {
           questionId: question.questionId,
         },
         user: {
-          userId: 1,
+          userId: parseInt(currentUserId),
         },
       };
     });
@@ -98,6 +103,13 @@ const RespondToSurvey = () => {
 
   return (
     <form onSubmit={handleSubmit}>
+      <h1>{currentUserId}</h1>
+      <label htmlFor="userId">Choose User Id Below</label>
+      <input
+        type="input"
+        style={{ color: "black", width: "30%" }}
+        onChange={handleUserIdChange}
+      />
       <label htmlFor="surveyNames">Choose survey to Respond</label>
       <select
         id="surveyNames"
