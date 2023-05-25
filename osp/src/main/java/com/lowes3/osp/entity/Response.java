@@ -1,6 +1,9 @@
 package com.lowes3.osp.entity;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -22,15 +25,16 @@ public class Response {
     private String responseDetails;
 
     //Many-To-One relationship with survey
-    @JsonBackReference(value="question-response")
+  
     @ManyToOne
     @JoinColumn(name = "question_Id")
     private Question question;
     
   //Many-To-One relationship with survey
-    @JsonBackReference
+
     @ManyToOne
     @JoinColumn(name = "user_Id")
     private User user;
-
+    
+   
 }
