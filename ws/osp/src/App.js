@@ -6,6 +6,8 @@ import About from "./pages/About";
 import CreateSurvey from "./pages/CreateSurvey";
 import EditSurvey from "./pages/EditSurvey";
 import RespondToSurvey from "./pages/RespondToSurvey";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 
 const routes = [
   { path: "/", name: "Home", Component: Home },
@@ -21,6 +23,8 @@ const routes = [
     name: "EditSurvey",
     Component: EditSurvey,
   },
+  { path: "/signin", name: "SignIn", Component: SignIn },
+  { path: "/signup", name: "SignUp", Component: SignUp },
 ];
 
 function App() {
