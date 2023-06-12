@@ -78,7 +78,7 @@ const RespondToSurvey = () => {
         },
       };
     });
-    console.log(JSON.stringify(responsesWithQuestionId));
+    // console.log(JSON.stringify(responsesWithQuestionId));
     saveResponses(responsesWithQuestionId);
   };
 

@@ -4,44 +4,46 @@ import "../styles/CreateSurvey.css";
 import axios from "axios";
 
 const EditSurvey = () => {
-
   const [surveys, updateSurveys] = useState([]);
-  const [selectedSurveyID, updateSelectedSurveyID] = useState(null)
+  const [selectedSurveyID, updateSelectedSurveyID] = useState(null);
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [questions, setQuestions] = useState([""]);
-  const [currentIndex,updateCurrentIndex]=useState(null);
+  const [currentIndex, updateCurrentIndex] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/getSurveys')
-      .then(response => {
+    axios
+      .get("http://localhost:8080/getSurveys")
+      .then((response) => {
         const data = response.data;
         updateSurveys(data);
         if (!selectedSurveyID)
-          updateSelectedSurveyID(data ? data[0].surveyId : null)
+          updateSelectedSurveyID(data ? data[0].surveyId : null);
       })
-      .catch(error => {
-        console.error('Error:', error);
+      .catch((error) => {
+        console.error("Error:", error);
       });
-  },[])
+  }, [selectedSurveyID]);
 
   useEffect(() => {
     if (selectedSurveyID)
-      axios.get(`http://localhost:8080/getSurvey/${selectedSurveyID}`)
-        .then(response => {
+      axios
+        .get(`http://localhost:8080/getSurvey/${selectedSurveyID}`)
+        .then((response) => {
           const data = response.data;
-          setTitle(data.surveyTitle)
-          setDescription(data.surveyDescription)
-          setQuestions(data.questions)
-          updateCurrentIndex(data ? data.questions[data.questions.length-1].questionId+1 : null)
-
+          setTitle(data.surveyTitle);
+          setDescription(data.surveyDescription);
+          setQuestions(data.questions);
+          updateCurrentIndex(
+            data
+              ? data.questions[data.questions.length - 1].questionId + 1
+              : null
+          );
         })
-        .catch(error => {
-          console.error('Error:', error);
+        .catch((error) => {
+          console.error("Error:", error);
         });
-  }, [selectedSurveyID])
-
-
+  }, [selectedSurveyID]);
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
@@ -58,9 +60,15 @@ const EditSurvey = () => {
   };
 
   const handleAddQuestion = () => {
-    const newQuestions = [...questions, {questionType: "Descriptive",
-      questionDescription: "",questionId:currentIndex}];
-      updateCurrentIndex(currentIndex+1);
+    const newQuestions = [
+      ...questions,
+      {
+        questionType: "Descriptive",
+        questionDescription: "",
+        questionId: currentIndex,
+      },
+    ];
+    updateCurrentIndex(currentIndex + 1);
     setQuestions(newQuestions);
   };
 
@@ -71,9 +79,8 @@ const EditSurvey = () => {
   };
 
   const updateSurvey = (survey) => {
-    
     axios
-    .put("http://localhost:8080/updateSurvey", survey)
+      .put("http://localhost:8080/updateSurvey", survey)
       .then((response) => {
         console.log("Survey updated successfully!");
       })
@@ -84,14 +91,13 @@ const EditSurvey = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    
-    const questionsWithDescription = questions.map((question,index) => {
+
+    const questionsWithDescription = questions.map((question, index) => {
       return {
-        questionId:question.questionId,
+        questionId: question.questionId,
         questionType: question.questionType,
         questionDescription: question.questionDescription,
         responses: question.responses || [],
-      
       };
     });
 
@@ -117,7 +123,7 @@ const EditSurvey = () => {
         required
         style={{ color: "black" }}
       />
-      {(
+      {
         <button
           type="button"
           onClick={() => handleRemoveQuestion(index)}
@@ -125,31 +131,34 @@ const EditSurvey = () => {
         >
           Delete
         </button>
-      )}
+      }
     </div>
   ));
 
   return (
     <form onSubmit={handleSubmit}>
-
       <label htmlFor="surveyNames">Choose survey to edit</label>
       <select
         id="surveyNames"
-        value={selectedSurveyID ? surveys.find((survey) => survey.surveyId === selectedSurveyID)?.surveyTitle : null}
+        value={
+          selectedSurveyID
+            ? surveys.find((survey) => survey.surveyId === selectedSurveyID)
+                ?.surveyTitle
+            : null
+        }
         onChange={(event) => {
-
-          updateSelectedSurveyID(event.target.value)
+          updateSelectedSurveyID(event.target.value);
         }}
         required
         style={{ color: "black" }}
       >
-        {surveys.map((survey) => <option value={survey.surveyId}>{survey.surveyTitle}</option>)}
-
+        {surveys.map((survey) => (
+          <option value={survey.surveyId}>{survey.surveyTitle}</option>
+        ))}
       </select>
 
-
-      {
-        selectedSurveyID && <>
+      {selectedSurveyID && (
+        <>
           <label htmlFor="title">Survey Title</label>
           <input
             placeholder="Enter Title Here"
@@ -187,8 +196,7 @@ const EditSurvey = () => {
             style={{ color: "black", width: "20%" }}
           />
         </>
-      }
-
+      )}
     </form>
   );
 };
