@@ -1,4 +1,4 @@
-package com.lowes3.osp;
+package controllerTests;
 
 import com.lowes3.osp.controller.ResponseController;
 import com.lowes3.osp.entity.Response;

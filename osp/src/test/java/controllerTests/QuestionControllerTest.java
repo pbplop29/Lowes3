@@ -1,4 +1,4 @@
-package com.lowes3.osp;
+package controllerTests;
 import com.lowes3.osp.controller.QuestionController;
 import com.lowes3.osp.entity.Question;
 import com.lowes3.osp.service.QuestionService;

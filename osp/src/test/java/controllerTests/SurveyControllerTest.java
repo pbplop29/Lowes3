@@ -1,4 +1,4 @@
-package com.lowes3.osp;
+package controllerTests;
 
 import com.lowes3.osp.controller.SurveyController;
 import com.lowes3.osp.entity.Survey;
